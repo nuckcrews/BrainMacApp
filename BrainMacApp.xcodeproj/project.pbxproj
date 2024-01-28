@@ -16,6 +16,10 @@
 		A0A91CC52B66EEC7002CA18F /* BrainMacAppUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0A91CC42B66EEC7002CA18F /* BrainMacAppUITestsLaunchTests.swift */; };
 		A0A91CD22B66F311002CA18F /* WelcomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0A91CD12B66F311002CA18F /* WelcomeView.swift */; };
 		A0A91CD42B66F338002CA18F /* RunningView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0A91CD32B66F338002CA18F /* RunningView.swift */; };
+		A0A91CD62B66FF39002CA18F /* ChatView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0A91CD52B66FF39002CA18F /* ChatView.swift */; };
+		A0A91CD82B66FF7F002CA18F /* MemoriesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0A91CD72B66FF7F002CA18F /* MemoriesView.swift */; };
+		A0A91CDC2B67015A002CA18F /* ChatViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0A91CDB2B67015A002CA18F /* ChatViewModel.swift */; };
+		A0A91CDE2B670182002CA18F /* ChatModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0A91CDD2B670182002CA18F /* ChatModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +53,10 @@
 		A0A91CC42B66EEC7002CA18F /* BrainMacAppUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrainMacAppUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		A0A91CD12B66F311002CA18F /* WelcomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeView.swift; sourceTree = "<group>"; };
 		A0A91CD32B66F338002CA18F /* RunningView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RunningView.swift; sourceTree = "<group>"; };
+		A0A91CD52B66FF39002CA18F /* ChatView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatView.swift; sourceTree = "<group>"; };
+		A0A91CD72B66FF7F002CA18F /* MemoriesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoriesView.swift; sourceTree = "<group>"; };
+		A0A91CDB2B67015A002CA18F /* ChatViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatViewModel.swift; sourceTree = "<group>"; };
+		A0A91CDD2B670182002CA18F /* ChatModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,6 +111,8 @@
 				A0A91CA82B66EEC3002CA18F /* ContentView.swift */,
 				A0A91CD12B66F311002CA18F /* WelcomeView.swift */,
 				A0A91CD32B66F338002CA18F /* RunningView.swift */,
+				A0A91CDA2B670147002CA18F /* Memories */,
+				A0A91CD92B67013D002CA18F /* Chat */,
 				A0A91CAA2B66EEC7002CA18F /* Assets.xcassets */,
 				A0A91CAF2B66EEC7002CA18F /* BrainMacApp.entitlements */,
 				A0A91CAC2B66EEC7002CA18F /* Preview Content */,
@@ -133,6 +143,24 @@
 				A0A91CC42B66EEC7002CA18F /* BrainMacAppUITestsLaunchTests.swift */,
 			);
 			path = BrainMacAppUITests;
+			sourceTree = "<group>";
+		};
+		A0A91CD92B67013D002CA18F /* Chat */ = {
+			isa = PBXGroup;
+			children = (
+				A0A91CD52B66FF39002CA18F /* ChatView.swift */,
+				A0A91CDB2B67015A002CA18F /* ChatViewModel.swift */,
+				A0A91CDD2B670182002CA18F /* ChatModel.swift */,
+			);
+			path = Chat;
+			sourceTree = "<group>";
+		};
+		A0A91CDA2B670147002CA18F /* Memories */ = {
+			isa = PBXGroup;
+			children = (
+				A0A91CD72B66FF7F002CA18F /* MemoriesView.swift */,
+			);
+			path = Memories;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -266,9 +294,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				A0A91CD42B66F338002CA18F /* RunningView.swift in Sources */,
+				A0A91CDC2B67015A002CA18F /* ChatViewModel.swift in Sources */,
 				A0A91CA92B66EEC3002CA18F /* ContentView.swift in Sources */,
+				A0A91CDE2B670182002CA18F /* ChatModel.swift in Sources */,
+				A0A91CD62B66FF39002CA18F /* ChatView.swift in Sources */,
 				A0A91CD22B66F311002CA18F /* WelcomeView.swift in Sources */,
 				A0A91CA72B66EEC3002CA18F /* BrainMacAppApp.swift in Sources */,
+				A0A91CD82B66FF7F002CA18F /* MemoriesView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

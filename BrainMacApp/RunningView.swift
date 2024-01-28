@@ -16,14 +16,14 @@ struct RunningView: View {
         NavigationView {
             List(selection: $selection) {
                 NavigationLink {
-                    Text("chat")
+                    ChatView()
                 } label: {
                     Text("Chat")
                 }
                 .tag(0)
 
                 NavigationLink {
-                    Text("mems")
+                    MemoriesView()
                 } label: {
                     Text("Memories")
                 }
@@ -42,7 +42,7 @@ struct RunningView: View {
                     action: {
                         isRunning = false
                     }, label: {
-                        Text("Stop running")
+                        Image(systemName: "pause")
                     }
                 )
             }

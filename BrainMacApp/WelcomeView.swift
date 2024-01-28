@@ -14,23 +14,33 @@ struct WelcomeView: View {
 
     var body: some View {
         VStack {
-            Image(systemName: "brain.head.profile")
+            Image("logo-black")
+                .renderingMode(.template)
                 .resizable()
                 .aspectRatio(contentMode: .fit)
-                .frame(width: 120, height: 120)
+                .foregroundStyle(Color.white)
+                .frame(width: 200, height: 200)
             Text("Welcome to your Brain")
                 .font(.largeTitle)
 
             Text("Open AI Key")
             TextField("Secret Key", text: $openAIKey)
+                .onSubmit {
+                    if !openAIKey.isEmpty {
+                        isRunning = true
+                    }
+                }
             Button {
-                isRunning = true
+                if !openAIKey.isEmpty {
+                    isRunning = true
+                }
             } label: {
                 Text("Turn on")
             }
             .buttonStyle(.borderedProminent)
             .disabled(openAIKey.isEmpty)
         }
+        .frame(maxWidth: 400)
         .padding()
     }
 }
