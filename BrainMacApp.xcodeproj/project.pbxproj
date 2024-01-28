@@ -14,6 +14,8 @@
 		A0A91CB92B66EEC7002CA18F /* BrainMacAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0A91CB82B66EEC7002CA18F /* BrainMacAppTests.swift */; };
 		A0A91CC32B66EEC7002CA18F /* BrainMacAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0A91CC22B66EEC7002CA18F /* BrainMacAppUITests.swift */; };
 		A0A91CC52B66EEC7002CA18F /* BrainMacAppUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0A91CC42B66EEC7002CA18F /* BrainMacAppUITestsLaunchTests.swift */; };
+		A0A91CD22B66F311002CA18F /* WelcomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0A91CD12B66F311002CA18F /* WelcomeView.swift */; };
+		A0A91CD42B66F338002CA18F /* RunningView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0A91CD32B66F338002CA18F /* RunningView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,6 +47,8 @@
 		A0A91CBE2B66EEC7002CA18F /* BrainMacAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BrainMacAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A0A91CC22B66EEC7002CA18F /* BrainMacAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrainMacAppUITests.swift; sourceTree = "<group>"; };
 		A0A91CC42B66EEC7002CA18F /* BrainMacAppUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrainMacAppUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		A0A91CD12B66F311002CA18F /* WelcomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeView.swift; sourceTree = "<group>"; };
+		A0A91CD32B66F338002CA18F /* RunningView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RunningView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,6 +101,8 @@
 			children = (
 				A0A91CA62B66EEC3002CA18F /* BrainMacAppApp.swift */,
 				A0A91CA82B66EEC3002CA18F /* ContentView.swift */,
+				A0A91CD12B66F311002CA18F /* WelcomeView.swift */,
+				A0A91CD32B66F338002CA18F /* RunningView.swift */,
 				A0A91CAA2B66EEC7002CA18F /* Assets.xcassets */,
 				A0A91CAF2B66EEC7002CA18F /* BrainMacApp.entitlements */,
 				A0A91CAC2B66EEC7002CA18F /* Preview Content */,
@@ -259,7 +265,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A0A91CD42B66F338002CA18F /* RunningView.swift in Sources */,
 				A0A91CA92B66EEC3002CA18F /* ContentView.swift in Sources */,
+				A0A91CD22B66F311002CA18F /* WelcomeView.swift in Sources */,
 				A0A91CA72B66EEC3002CA18F /* BrainMacAppApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -429,6 +437,7 @@
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = Brain;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -456,6 +465,7 @@
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = Brain;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

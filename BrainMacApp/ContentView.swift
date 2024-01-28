@@ -8,16 +8,22 @@
 import SwiftUI
 
 struct ContentView: View {
+
+    @State private var isRunning = false
+
     var body: some View {
         VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundStyle(.tint)
-            Text("Hello, world!")
+            if !isRunning {
+                WelcomeView(isRunning: $isRunning)
+            } else {
+                RunningView(isRunning: $isRunning)
+            }
         }
-        .padding()
+        .animation(.snappy, value: isRunning)
     }
 }
+
+
 
 #Preview {
     ContentView()
