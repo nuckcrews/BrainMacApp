@@ -8,10 +8,27 @@
 import SwiftUI
 
 struct MemoriesView: View {
-    
+
+    @State private var memoryText = ""
+
     var body: some View {
-        Text("Add memory")
-            .padding()
+        VStack {
+            HStack {
+                TextField("Path to memory", text: $memoryText)
+                Button(
+                    action: {
+                        
+                    }, 
+                    label: {
+                        Text("Add Memory")
+                    }
+                )
+                .buttonStyle(.borderedProminent)
+                .disabled(memoryText.isEmpty)
+            }
+            Spacer()
+        }
+        .padding()
     }
 }
 

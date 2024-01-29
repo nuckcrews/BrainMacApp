@@ -28,9 +28,9 @@ struct WelcomeView: View {
                 .aspectRatio(contentMode: .fit)
                 .foregroundStyle(Color.white)
                 .frame(width: 200, height: 200)
-                .padding(.bottom, 16)
             Text("Welcome to your Brain")
                 .font(.largeTitle)
+                .padding(.bottom, 24)
 
             HStack {
                 Spacer()
@@ -65,6 +65,7 @@ struct WelcomeView: View {
                 .disabled(openAIKey.isEmpty && !hasExistingKey)
                 Spacer()
             }
+            .padding(.bottom, 24)
         }
         .frame(maxWidth: 400)
         .padding()
