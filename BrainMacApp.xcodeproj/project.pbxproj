@@ -11,7 +11,6 @@
 		A0A91CA72B66EEC3002CA18F /* AppView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0A91CA62B66EEC3002CA18F /* AppView.swift */; };
 		A0A91CA92B66EEC3002CA18F /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0A91CA82B66EEC3002CA18F /* ContentView.swift */; };
 		A0A91CAB2B66EEC7002CA18F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A0A91CAA2B66EEC7002CA18F /* Assets.xcassets */; };
-		A0A91CAE2B66EEC7002CA18F /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A0A91CAD2B66EEC7002CA18F /* Preview Assets.xcassets */; };
 		A0A91CB92B66EEC7002CA18F /* BrainMacAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0A91CB82B66EEC7002CA18F /* BrainMacAppTests.swift */; };
 		A0A91CC32B66EEC7002CA18F /* BrainMacAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0A91CC22B66EEC7002CA18F /* BrainMacAppUITests.swift */; };
 		A0A91CC52B66EEC7002CA18F /* BrainMacAppUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0A91CC42B66EEC7002CA18F /* BrainMacAppUITestsLaunchTests.swift */; };
@@ -48,7 +47,6 @@
 		A0A91CA62B66EEC3002CA18F /* AppView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppView.swift; sourceTree = "<group>"; };
 		A0A91CA82B66EEC3002CA18F /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		A0A91CAA2B66EEC7002CA18F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		A0A91CAD2B66EEC7002CA18F /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		A0A91CAF2B66EEC7002CA18F /* BrainMacApp.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = BrainMacApp.entitlements; sourceTree = "<group>"; };
 		A0A91CB42B66EEC7002CA18F /* BrainMacAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BrainMacAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A0A91CB82B66EEC7002CA18F /* BrainMacAppTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrainMacAppTests.swift; sourceTree = "<group>"; };
@@ -128,17 +126,8 @@
 				A0788EFE2B67430D00188FDF /* Data */,
 				A0A91CAA2B66EEC7002CA18F /* Assets.xcassets */,
 				A0A91CAF2B66EEC7002CA18F /* BrainMacApp.entitlements */,
-				A0A91CAC2B66EEC7002CA18F /* Preview Content */,
 			);
 			path = BrainMacApp;
-			sourceTree = "<group>";
-		};
-		A0A91CAC2B66EEC7002CA18F /* Preview Content */ = {
-			isa = PBXGroup;
-			children = (
-				A0A91CAD2B66EEC7002CA18F /* Preview Assets.xcassets */,
-			);
-			path = "Preview Content";
 			sourceTree = "<group>";
 		};
 		A0A91CB72B66EEC7002CA18F /* BrainMacAppTests */ = {
@@ -296,7 +285,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A0A91CAE2B66EEC7002CA18F /* Preview Assets.xcassets in Resources */,
 				A0A91CAB2B66EEC7002CA18F /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -496,7 +484,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"BrainMacApp/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "";
 				DEVELOPMENT_TEAM = 99P8V3CP7F;
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
@@ -524,7 +512,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"BrainMacApp/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "";
 				DEVELOPMENT_TEAM = 99P8V3CP7F;
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
