@@ -7,7 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		A0A91CA72B66EEC3002CA18F /* BrainMacAppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0A91CA62B66EEC3002CA18F /* BrainMacAppApp.swift */; };
+		A0788F002B67431D00188FDF /* Keychain.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0788EFF2B67431D00188FDF /* Keychain.swift */; };
+		A0A91CA72B66EEC3002CA18F /* AppView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0A91CA62B66EEC3002CA18F /* AppView.swift */; };
 		A0A91CA92B66EEC3002CA18F /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0A91CA82B66EEC3002CA18F /* ContentView.swift */; };
 		A0A91CAB2B66EEC7002CA18F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A0A91CAA2B66EEC7002CA18F /* Assets.xcassets */; };
 		A0A91CAE2B66EEC7002CA18F /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A0A91CAD2B66EEC7002CA18F /* Preview Assets.xcassets */; };
@@ -20,6 +21,8 @@
 		A0A91CD82B66FF7F002CA18F /* MemoriesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0A91CD72B66FF7F002CA18F /* MemoriesView.swift */; };
 		A0A91CDC2B67015A002CA18F /* ChatViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0A91CDB2B67015A002CA18F /* ChatViewModel.swift */; };
 		A0A91CDE2B670182002CA18F /* ChatModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0A91CDD2B670182002CA18F /* ChatModel.swift */; };
+		A0A91CEA2B673A43002CA18F /* ApplicationState.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0A91CE92B673A43002CA18F /* ApplicationState.swift */; };
+		A0E18AD72B67445B009B77DF /* Log.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0E18AD62B67445B009B77DF /* Log.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,8 +43,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		A0788EFF2B67431D00188FDF /* Keychain.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Keychain.swift; sourceTree = "<group>"; };
 		A0A91CA32B66EEC3002CA18F /* BrainMacApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BrainMacApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		A0A91CA62B66EEC3002CA18F /* BrainMacAppApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrainMacAppApp.swift; sourceTree = "<group>"; };
+		A0A91CA62B66EEC3002CA18F /* AppView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppView.swift; sourceTree = "<group>"; };
 		A0A91CA82B66EEC3002CA18F /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		A0A91CAA2B66EEC7002CA18F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A0A91CAD2B66EEC7002CA18F /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
@@ -57,6 +61,8 @@
 		A0A91CD72B66FF7F002CA18F /* MemoriesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoriesView.swift; sourceTree = "<group>"; };
 		A0A91CDB2B67015A002CA18F /* ChatViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatViewModel.swift; sourceTree = "<group>"; };
 		A0A91CDD2B670182002CA18F /* ChatModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatModel.swift; sourceTree = "<group>"; };
+		A0A91CE92B673A43002CA18F /* ApplicationState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApplicationState.swift; sourceTree = "<group>"; };
+		A0E18AD62B67445B009B77DF /* Log.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Log.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -84,6 +90,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		A0788EFE2B67430D00188FDF /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				A0788EFF2B67431D00188FDF /* Keychain.swift */,
+				A0E18AD62B67445B009B77DF /* Log.swift */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
 		A0A91C9A2B66EEC3002CA18F = {
 			isa = PBXGroup;
 			children = (
@@ -107,12 +122,10 @@
 		A0A91CA52B66EEC3002CA18F /* BrainMacApp */ = {
 			isa = PBXGroup;
 			children = (
-				A0A91CA62B66EEC3002CA18F /* BrainMacAppApp.swift */,
-				A0A91CA82B66EEC3002CA18F /* ContentView.swift */,
-				A0A91CD12B66F311002CA18F /* WelcomeView.swift */,
-				A0A91CD32B66F338002CA18F /* RunningView.swift */,
+				A0A91CE82B673A31002CA18F /* Launch */,
 				A0A91CDA2B670147002CA18F /* Memories */,
 				A0A91CD92B67013D002CA18F /* Chat */,
+				A0788EFE2B67430D00188FDF /* Data */,
 				A0A91CAA2B66EEC7002CA18F /* Assets.xcassets */,
 				A0A91CAF2B66EEC7002CA18F /* BrainMacApp.entitlements */,
 				A0A91CAC2B66EEC7002CA18F /* Preview Content */,
@@ -163,6 +176,18 @@
 			path = Memories;
 			sourceTree = "<group>";
 		};
+		A0A91CE82B673A31002CA18F /* Launch */ = {
+			isa = PBXGroup;
+			children = (
+				A0A91CE92B673A43002CA18F /* ApplicationState.swift */,
+				A0A91CA62B66EEC3002CA18F /* AppView.swift */,
+				A0A91CA82B66EEC3002CA18F /* ContentView.swift */,
+				A0A91CD12B66F311002CA18F /* WelcomeView.swift */,
+				A0A91CD32B66F338002CA18F /* RunningView.swift */,
+			);
+			path = Launch;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -179,6 +204,8 @@
 			dependencies = (
 			);
 			name = BrainMacApp;
+			packageProductDependencies = (
+			);
 			productName = BrainMacApp;
 			productReference = A0A91CA32B66EEC3002CA18F /* BrainMacApp.app */;
 			productType = "com.apple.product-type.application";
@@ -251,6 +278,8 @@
 				Base,
 			);
 			mainGroup = A0A91C9A2B66EEC3002CA18F;
+			packageReferences = (
+			);
 			productRefGroup = A0A91CA42B66EEC3002CA18F /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -295,12 +324,15 @@
 			files = (
 				A0A91CD42B66F338002CA18F /* RunningView.swift in Sources */,
 				A0A91CDC2B67015A002CA18F /* ChatViewModel.swift in Sources */,
+				A0E18AD72B67445B009B77DF /* Log.swift in Sources */,
 				A0A91CA92B66EEC3002CA18F /* ContentView.swift in Sources */,
+				A0A91CEA2B673A43002CA18F /* ApplicationState.swift in Sources */,
 				A0A91CDE2B670182002CA18F /* ChatModel.swift in Sources */,
 				A0A91CD62B66FF39002CA18F /* ChatView.swift in Sources */,
 				A0A91CD22B66F311002CA18F /* WelcomeView.swift in Sources */,
-				A0A91CA72B66EEC3002CA18F /* BrainMacAppApp.swift in Sources */,
+				A0A91CA72B66EEC3002CA18F /* AppView.swift in Sources */,
 				A0A91CD82B66FF7F002CA18F /* MemoriesView.swift in Sources */,
+				A0788F002B67431D00188FDF /* Keychain.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -476,7 +508,7 @@
 					"@executable_path/../Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.plc.BrainMacApp;
+				PRODUCT_BUNDLE_IDENTIFIER = com.brain.mac;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -504,7 +536,7 @@
 					"@executable_path/../Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.plc.BrainMacApp;
+				PRODUCT_BUNDLE_IDENTIFIER = com.brain.mac;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -522,7 +554,7 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				MACOSX_DEPLOYMENT_TARGET = 14.2;
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.plc.BrainMacAppTests;
+				PRODUCT_BUNDLE_IDENTIFIER = com.brain.macAppTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
@@ -541,7 +573,7 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				MACOSX_DEPLOYMENT_TARGET = 14.2;
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.plc.BrainMacAppTests;
+				PRODUCT_BUNDLE_IDENTIFIER = com.brain.macAppTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
@@ -558,7 +590,7 @@
 				DEVELOPMENT_TEAM = 99P8V3CP7F;
 				GENERATE_INFOPLIST_FILE = YES;
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.plc.BrainMacAppUITests;
+				PRODUCT_BUNDLE_IDENTIFIER = com.brain.macUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
@@ -575,7 +607,7 @@
 				DEVELOPMENT_TEAM = 99P8V3CP7F;
 				GENERATE_INFOPLIST_FILE = YES;
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.plc.BrainMacAppUITests;
+				PRODUCT_BUNDLE_IDENTIFIER = com.brain.macUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
