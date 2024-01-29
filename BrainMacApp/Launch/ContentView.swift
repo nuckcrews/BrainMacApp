@@ -10,11 +10,12 @@ import SwiftUI
 struct ContentView: View {
 
     @State private var isRunning = false
+    @EnvironmentObject var applicationState: ApplicationState
 
     var body: some View {
         VStack {
             if !isRunning {
-                WelcomeView(isRunning: $isRunning)
+                WelcomeView(isRunning: $isRunning, applicationState: applicationState)
             } else {
                 RunningView(isRunning: $isRunning)
             }
@@ -27,4 +28,5 @@ struct ContentView: View {
 
 #Preview {
     ContentView()
+        .environmentObject(ApplicationState.shared)
 }

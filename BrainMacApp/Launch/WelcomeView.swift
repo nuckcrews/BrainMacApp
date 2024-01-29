@@ -11,8 +11,14 @@ struct WelcomeView: View {
 
     @Binding var isRunning: Bool
     @State private var openAIKey = ""
+    @State private var hasExistingKey: Bool
+    @ObservedObject var applicationState: ApplicationState
 
-    @EnvironmentObject var applicationState: ApplicationState
+    init(isRunning: Binding<Bool>, applicationState: ApplicationState) {
+        _isRunning = isRunning
+        self.applicationState = applicationState
+        _hasExistingKey = State(initialValue: applicationState.openAI.key != nil)
+    }
 
     var body: some View {
         VStack {
@@ -28,9 +34,11 @@ struct WelcomeView: View {
 
             HStack {
                 Spacer()
-                if applicationState.openAI.key != nil {
+                if hasExistingKey {
                     Button {
                         applicationState.openAI.reset()
+                        openAIKey = ""
+                        hasExistingKey = false
                     } label: {
                         Text("Reset Keys")
                     }
@@ -54,15 +62,16 @@ struct WelcomeView: View {
                     Text("Turn on")
                 }
                 .buttonStyle(.borderedProminent)
-                .disabled(openAIKey.isEmpty && applicationState.openAI.key == nil)
+                .disabled(openAIKey.isEmpty && !hasExistingKey)
                 Spacer()
             }
         }
         .frame(maxWidth: 400)
         .padding()
+        .animation(.snappy, value: hasExistingKey)
     }
 }
 
 #Preview {
-    WelcomeView(isRunning: .constant(false))
+    WelcomeView(isRunning: .constant(false), applicationState: ApplicationState.shared)
 }

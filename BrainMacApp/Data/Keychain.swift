@@ -45,24 +45,26 @@ public struct Keychain {
     }
 
     private func save(_ data: Data, service: String, account: String) {
-        let query = [
-            kSecValueData: data,
-            kSecClass: kSecClassGenericPassword,
-            kSecAttrService: service,
-            kSecAttrAccount: account,
-        ] as CFDictionary
-
-        let status = SecItemAdd(query, nil)
-
-        if status == errSecDuplicateItem {
+        Task.detached {
             let query = [
+                kSecValueData: data,
+                kSecClass: kSecClassGenericPassword,
                 kSecAttrService: service,
                 kSecAttrAccount: account,
-                kSecClass: kSecClassGenericPassword,
             ] as CFDictionary
 
-            let attributesToUpdate = [kSecValueData: data] as CFDictionary
-            SecItemUpdate(query, attributesToUpdate)
+            let status = SecItemAdd(query, nil)
+
+            if status == errSecDuplicateItem {
+                let query = [
+                    kSecAttrService: service,
+                    kSecAttrAccount: account,
+                    kSecClass: kSecClassGenericPassword,
+                ] as CFDictionary
+
+                let attributesToUpdate = [kSecValueData: data] as CFDictionary
+                SecItemUpdate(query, attributesToUpdate)
+            }
         }
     }
 
@@ -82,13 +84,15 @@ public struct Keychain {
     }
 
     private func delete(account: String, service: String) {
-        let query = [
-            kSecAttrService: service,
-            kSecAttrAccount: account,
-            kSecClass: kSecClassGenericPassword,
-        ] as CFDictionary
+        Task.detached {
+            let query = [
+                kSecAttrService: service,
+                kSecAttrAccount: account,
+                kSecClass: kSecClassGenericPassword,
+            ] as CFDictionary
 
-        SecItemDelete(query)
+            SecItemDelete(query)
+        }
     }
 }
 
