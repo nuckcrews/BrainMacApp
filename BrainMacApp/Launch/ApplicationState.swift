@@ -18,7 +18,28 @@ final class ApplicationState: ObservableObject {
         OpenAI(keychain: keychain)
     }()
 
+    let brain = Brain()
+
     init() {}
+
+    struct Brain {
+
+        private let userDefaults = UserDefaults.standard
+
+        static let endpointLocation = "com.brain.endpoint"
+
+        var endpoint: String? {
+            userDefaults.string(forKey: Self.endpointLocation)
+        }
+
+        func setEndpoint(_ endpoint: String) {
+            userDefaults.setValue(endpoint, forKey: Self.endpointLocation)
+        }
+
+        func reset() {
+            userDefaults.removeObject(forKey: Self.endpointLocation)
+        }
+    }
 
     struct OpenAI {
 

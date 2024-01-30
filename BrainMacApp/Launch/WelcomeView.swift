@@ -11,13 +11,16 @@ struct WelcomeView: View {
 
     @Binding var isRunning: Bool
     @State private var openAIKey = ""
+    @State private var endpointText = ""
     @State private var hasExistingKey: Bool
+    @FocusState private var focusState
     @ObservedObject var applicationState: ApplicationState
 
     init(isRunning: Binding<Bool>, applicationState: ApplicationState) {
         _isRunning = isRunning
         self.applicationState = applicationState
         _hasExistingKey = State(initialValue: applicationState.openAI.key != nil)
+        _endpointText = State(initialValue: applicationState.brain.endpoint ?? "")
     }
 
     var body: some View {
@@ -32,6 +35,10 @@ struct WelcomeView: View {
                 .font(.largeTitle)
                 .padding(.bottom, 24)
 
+            TextField("Brain URI", text: $endpointText)
+                .focused($focusState)
+                .frame(width: 200)
+                .padding(.bottom, 16)
             HStack {
                 Spacer()
                 if hasExistingKey {
@@ -52,17 +59,19 @@ struct WelcomeView: View {
                         }
                 }
                 Button {
-                    if applicationState.openAI.key != nil {
+                    if applicationState.openAI.key != nil && !endpointText.isEmpty {
                         isRunning = true
-                    } else if !openAIKey.isEmpty {
+                        applicationState.brain.setEndpoint(endpointText)
+                    } else if !openAIKey.isEmpty && !endpointText.isEmpty {
                         applicationState.openAI.setKey(openAIKey)
+                        applicationState.brain.setEndpoint(endpointText)
                         isRunning = true
                     }
                 } label: {
                     Text("Turn on")
                 }
                 .buttonStyle(.borderedProminent)
-                .disabled(openAIKey.isEmpty && !hasExistingKey)
+                .disabled((openAIKey.isEmpty && !hasExistingKey) || endpointText.isEmpty)
                 Spacer()
             }
             .padding(.bottom, 24)
