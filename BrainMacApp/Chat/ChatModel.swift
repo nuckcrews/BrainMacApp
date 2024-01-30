@@ -26,3 +26,7 @@ struct ChatMessageModel: Codable, Hashable, Identifiable {
         lhs.id == rhs.id
     }
 }
+
+struct NewChatMessageModel: Codable {
+    let message: String
+}

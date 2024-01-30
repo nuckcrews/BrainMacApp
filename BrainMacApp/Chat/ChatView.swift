@@ -26,14 +26,21 @@ struct ChatView: View {
             HStack {
                 TextField("Write something...", text: $viewModel.inputText)
                 Button {
-                    
+                    viewModel.sendChat()
                 } label: {
                     Text("Send")
                 }
                 .buttonStyle(.borderedProminent)
+                .disabled(viewModel.inputText.isEmpty)
             }
         }
         .padding()
+        .task {
+            viewModel.open()
+        }
+        .onDisappear {
+            viewModel.close()
+        }
     }
 }
 

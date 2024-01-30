@@ -20,7 +20,7 @@ struct WelcomeView: View {
         _isRunning = isRunning
         self.applicationState = applicationState
         _hasExistingKey = State(initialValue: applicationState.openAI.key != nil)
-        _endpointText = State(initialValue: applicationState.brain.endpoint ?? "")
+        _endpointText = State(initialValue: applicationState.brain.endpoint?.absoluteString ?? "")
     }
 
     var body: some View {
@@ -59,19 +59,19 @@ struct WelcomeView: View {
                         }
                 }
                 Button {
-                    if applicationState.openAI.key != nil && !endpointText.isEmpty {
+                    if applicationState.openAI.key != nil, let url = URL(string: endpointText) {
                         isRunning = true
-                        applicationState.brain.setEndpoint(endpointText)
-                    } else if !openAIKey.isEmpty && !endpointText.isEmpty {
+                        applicationState.brain.setEndpoint(url)
+                    } else if !openAIKey.isEmpty, let url = URL(string: endpointText) {
                         applicationState.openAI.setKey(openAIKey)
-                        applicationState.brain.setEndpoint(endpointText)
+                        applicationState.brain.setEndpoint(url)
                         isRunning = true
                     }
                 } label: {
                     Text("Turn on")
                 }
                 .buttonStyle(.borderedProminent)
-                .disabled((openAIKey.isEmpty && !hasExistingKey) || endpointText.isEmpty)
+                .disabled((openAIKey.isEmpty && !hasExistingKey) || URL(string: endpointText) == nil)
                 Spacer()
             }
             .padding(.bottom, 24)

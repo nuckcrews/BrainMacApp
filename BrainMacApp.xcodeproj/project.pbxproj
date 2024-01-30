@@ -22,6 +22,7 @@
 		A0A91CDE2B670182002CA18F /* ChatModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0A91CDD2B670182002CA18F /* ChatModel.swift */; };
 		A0A91CEA2B673A43002CA18F /* ApplicationState.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0A91CE92B673A43002CA18F /* ApplicationState.swift */; };
 		A0E18AD72B67445B009B77DF /* Log.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0E18AD62B67445B009B77DF /* Log.swift */; };
+		A0E5016F2B68939200EF01E3 /* WebsocketClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0E5016E2B68939200EF01E3 /* WebsocketClient.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -61,6 +62,7 @@
 		A0A91CDD2B670182002CA18F /* ChatModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatModel.swift; sourceTree = "<group>"; };
 		A0A91CE92B673A43002CA18F /* ApplicationState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApplicationState.swift; sourceTree = "<group>"; };
 		A0E18AD62B67445B009B77DF /* Log.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Log.swift; sourceTree = "<group>"; };
+		A0E5016E2B68939200EF01E3 /* WebsocketClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebsocketClient.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -93,6 +95,7 @@
 			children = (
 				A0788EFF2B67431D00188FDF /* Keychain.swift */,
 				A0E18AD62B67445B009B77DF /* Log.swift */,
+				A0E5016E2B68939200EF01E3 /* WebsocketClient.swift */,
 			);
 			path = Data;
 			sourceTree = "<group>";
@@ -312,6 +315,7 @@
 			files = (
 				A0A91CD42B66F338002CA18F /* RunningView.swift in Sources */,
 				A0A91CDC2B67015A002CA18F /* ChatViewModel.swift in Sources */,
+				A0E5016F2B68939200EF01E3 /* WebsocketClient.swift in Sources */,
 				A0E18AD72B67445B009B77DF /* Log.swift in Sources */,
 				A0A91CA92B66EEC3002CA18F /* ContentView.swift in Sources */,
 				A0A91CEA2B673A43002CA18F /* ApplicationState.swift in Sources */,

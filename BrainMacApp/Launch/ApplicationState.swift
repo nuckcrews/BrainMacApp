@@ -28,12 +28,13 @@ final class ApplicationState: ObservableObject {
 
         static let endpointLocation = "com.brain.endpoint"
 
-        var endpoint: String? {
-            userDefaults.string(forKey: Self.endpointLocation)
+        var endpoint: URL? {
+            guard let url = userDefaults.string(forKey: Self.endpointLocation) else { return nil }
+            return URL(string: url)
         }
 
-        func setEndpoint(_ endpoint: String) {
-            userDefaults.setValue(endpoint, forKey: Self.endpointLocation)
+        func setEndpoint(_ endpoint: URL) {
+            userDefaults.setValue(endpoint.absoluteString, forKey: Self.endpointLocation)
         }
 
         func reset() {
